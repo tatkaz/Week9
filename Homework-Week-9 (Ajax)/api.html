@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>To Do API</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="author" content="The Chopping Block, Inc." />
+	<meta name="geo.country" content="US" />
+	<meta name="dc.language" content="en" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	
+</head>
+<body>
+<div class="wrap">
+	<h1 class="">Todo List Server</h1> <!-- / -->
+	
+	
+	<p class="">Primary url: http://sva.designedbyscience.com</p> <!-- / -->
+	
+	<div class="api_entry">
+	<h3 class="">GET /tasks</h3> <!-- / -->
+	
+	<p class="">
+		Returns a list of all your todos
+	</p> <!-- / -->
+	<h4 class="">Example Call</h4> <!-- / -->
+	<code class="">
+		GET http://sva.designedbyscience.com/tasks?username=eric
+	</code> <!-- / -->
+	<h4 class="">Example Response</h4> <!-- / -->
+	<code class="">
+		[{
+			id: 1,
+			task_text: 'Something to do',
+			completed: 'false'
+		}]
+	</code> <!-- / -->	
+</div> <!-- / -->
+
+	<div class="api_entry">
+	<h3 class="">POST /task</h3> <!-- / -->
+	
+	<p class="">
+		Creates a new todo under your username, returns the id of your task
+	</p> <!-- / -->
+	<h4 class="">Example Call</h4> <!-- / -->
+	<code class="">
+		POST http://sva.designedbyscience.com/task?task=erichastodothis&username=eric
+	</code> <!-- / -->
+	<h4 class="">Example Response</h4> <!-- / -->
+	<code class="">
+		{
+			'id': 1,
+			'success': true,
+		}
+	</code> <!-- / -->	
+</div> <!-- / -->
+
+
+	<div class="api_entry">
+	<h3 class="">POST /task/:id</h3> <!-- / -->
+	
+	<p class="">
+		Completes the task with :id, returns id 
+	</p> <!-- / -->
+	<h4 class="">Example Call</h4> <!-- / -->
+	<code class="">
+		POST http://sva.designedbyscience.com/task/1
+	</code> <!-- / -->
+	<h4 class="">Example Response</h4> <!-- / -->
+	<code class="">
+		{
+			'id': 1,
+			'success': true,
+		}
+	</code> <!-- / -->	
+</div> <!-- / -->
+
+
+
+				
+</div> <!-- /wrap -->
+</body>
+</html>
